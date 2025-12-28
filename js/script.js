@@ -1,9 +1,9 @@
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('.nav-list a');
 
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function () {
     let header = document.querySelector('.nav');
-    header.classList.toggle('rolagem', window.scrollY > 0 );
+    header.classList.toggle('rolagem', window.scrollY > 0);
 });
 
 
@@ -17,11 +17,11 @@ window.onscroll = () => {
 
         // Se a posição atual do scroll estiver DENTRO desta seção
         if (top >= offset && top < offset + height) {
-            
+
             // Remove a classe 'active' de TODOS os links primeiro
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                
+
                 // Remove também do span se necessário, mas tirando do 'a' já resolve pelo CSS
             });
 
@@ -32,6 +32,6 @@ window.onscroll = () => {
             }
         }
     });
-    
-    // (Seu código anterior do header transparente pode continuar aqui embaixo...)
+
+
 };

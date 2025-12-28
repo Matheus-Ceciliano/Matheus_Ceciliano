@@ -13,11 +13,14 @@ body {
     background-color: #222831;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 
 /*NAV INICIO*/
 .nav {
-    /*background-color: #242524;*/
     background-color: #0D0D0D;
     height: 70px;
     width: 100%;
@@ -32,7 +35,6 @@ body {
 
 .nav-list {
     display: flex;
-    align-items: center;
     list-style: none;
     transition: 0.5s ease-in-out;
 
@@ -43,7 +45,6 @@ body {
     font-family: 'Gemunu Libre', sans-serif;
     font-weight: 200;
     color: #7cb3da;
-    justify-content: flex-end;
     position: absolute;
     left: 120px;
     transition: 0.5s ease-in-out;
@@ -53,7 +54,7 @@ body {
 }
 
 .titulo:hover {
-    color: #afd0e8;
+    color: #c4ddef;
     cursor: pointer;
 
 }
@@ -61,7 +62,6 @@ body {
 .nav-list a {
     text-decoration: none;
     color: #607e96;
-    position: relative;
     padding: 15px;
     transition: 0.5s ease-in-out;
 
@@ -71,7 +71,6 @@ body {
 
 /*INICIO LINKS*/
 .nav-list a span {
-
     position: relative;
 }
 
@@ -79,7 +78,7 @@ body {
     content: '';
     position: absolute;
     bottom: 0;
-    left: -2px;
+    left: 0;
     width: 0%;
     height: 3px;
     background-color: #708b96;
@@ -89,7 +88,7 @@ body {
 
 .nav-list a:hover span::after {
     color: #6a838d;
-    width: 110%;
+    width: 100%;
 
 }
 
@@ -105,7 +104,6 @@ body {
     position: absolute;
     right: 160px;
     display: flex;
-    align-items: center;
     gap: 20px;
 
 }
@@ -114,7 +112,7 @@ body {
     display: inline-block;
     text-decoration: none;
     color: #547e9f;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     transition: 0.5s ease-in-out;
 
 }
@@ -188,14 +186,41 @@ nav.rolagem .social-links a.twitter:hover {
 .main {
     width: 100%;
     height: calc(100vh - 50px);
-    /*background-image: url('/img/programador.png');*/
     background-color: #0D0D0D;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
-    padding-left: 50px;
+    padding-left: 120px;
+    justify-content: space-between;
+
 }
+
+.main .img-notebook {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background-color: #5f89a6;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 🔴 ESSENCIAL */
+
+    margin-right: 150px;
+    overflow: visible;
+
+}
+
+.main .img-notebook img {
+    width: 550px;
+    max-width: none;
+
+
+
+}
+
 
 .main h1 {
     color: rgb(255, 255, 255);
@@ -218,8 +243,8 @@ nav.rolagem .social-links a.twitter:hover {
     cursor: pointer;
     background-color: #ffffff;
     border: 0;
-    padding: 14px;
-    border-radius: 10px;
+    padding: 15px 25px;
+    border-radius: 100px;
     font-size: 18px;
     font-weight: bold;
     transition: transform 1s ease, letter-spacing 0.5s ease;
@@ -243,6 +268,7 @@ nav.rolagem .social-links a.twitter:hover {
 }
 
 /*FIm Main*/
+
 /*Sobre*/
 
 
@@ -488,4 +514,73 @@ nav.rolagem .social-links a.twitter:hover {
 
 .card .button_github:hover {
     background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*CARD EM BREVE*/
+.shortly-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0D0D0D;
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+.shortly-container .shortly {
+    box-shadow: 8px 8px 8px 8px rgba(1, 0, 0, 0.4);
+    background-color: rgb(21, 21, 21);
+    display: block;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+
+}
+
+.shortly h3 {
+    color: white;
+    padding-bottom: 20px;
+    font-size: 22px;
+}
+
+.shortly .tres-pontos {
+    color: rgba(255, 255, 255, 0.66);
+    width: 30px;
+    height: 30px;
+    padding-bottom: 10px;
+
+
+}
+
+.shortly p {
+    color: white;
+    color: rgba(255, 255, 255, 0.66);
+
+
+}
+
+.shortly .svg-terminal {
+    color: rgba(255, 255, 255, 0.66);
+    width: 35px;
+    height: 35px;
+    margin-top: 50px;
+
+
 }

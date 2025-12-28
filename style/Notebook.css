@@ -1,0 +1,136 @@
+/* FUNDO */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #2a2a2a 0%, #121212 100%);
+}
+
+/* NOTEBOOK */
+.notebook-wrapper {
+    position: relative;
+    width: 800px;
+    max-width: 95%;
+    aspect-ratio: 16 / 10;
+    border-radius: 10px;
+    left: -35px;
+
+}
+
+.notebook-frame {
+    width: 100%;
+    z-index: 10;
+    position: relative;
+    pointer-events: none;
+}
+
+/* TERMINAL */
+.terminal-window {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 80%;
+    max-width: 520px;
+    height: 72%;
+
+    background: rgba(15, 15, 15, 0.693);
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    backdrop-filter: blur(8px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.29);
+}
+
+
+.notebook-screen {
+    position: absolute;
+
+    /* AJUSTE FINO DA TELA */
+    top: 6%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-image: url("/img/macbook-background-yll4bt60lklj412d\ .jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* BARRA TOPO */
+.terminal-header {
+    height: 26px;
+    background: #e6e6e6;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.window-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.red {
+    background: #fd6056;
+}
+
+.yellow {
+    background: #ffc02e;
+}
+
+.green {
+    background: #28ca42;
+}
+
+.terminal-title {
+    flex: 1;
+    text-align: center;
+    font-size: 11px;
+    color: #555;
+    margin-right: 40px;
+}
+
+/* CONTEÚDO */
+.terminal-body {
+    flex: 1;
+    padding: 16px;
+    font-family: 'Courier New', monospace;
+    color: #28ca42;
+    font-size: 15px;
+
+    display: flex;
+    align-items: flex-start;
+    /* 👈 texto começa no topo */
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.prompt {
+    color: #ffffff;
+    margin-right: 8px;
+}
+
+.cursor {
+    margin-left: 4px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
