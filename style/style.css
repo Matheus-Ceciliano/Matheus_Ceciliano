@@ -330,12 +330,11 @@ nav.rolagem .social-links a.twitter:hover {
     display: block;
     box-sizing: border-box;
     flex-direction: column;
-
     max-width: 30%;
     padding: 40px;
     border-radius: 10px;
     text-align: center;
-    transition: 0.9s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 .container_project .card h3 {
@@ -344,11 +343,23 @@ nav.rolagem .social-links a.twitter:hover {
     margin-bottom: 30px;
 }
 
-.container_project .card img {
+.card .img {
+    display: flex;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    border-radius: 12px;
+
+}
+
+.card .img img {
     max-width: 100%;
     border-radius: 10px;
     height: 180px;
     margin-bottom: 40px;
+    display: block;
+    object-fit: cover;
+
 
 }
 
@@ -373,5 +384,108 @@ nav.rolagem .social-links a.twitter:hover {
 }
 
 .container_project .card:hover {
-    transform: scale(1.1);
+    background-color: rgb(29, 29, 29);
+
+}
+
+/*Butão olho*/
+.card .button {
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    transform: translate(-40%, -70%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    transition: all 0.4s ease;
+
+
+
+
+}
+
+.button svg {
+    width: 50px;
+
+    height: 50px;
+
+}
+
+.card .button a {
+    color: #333;
+    display: flex;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.container_project .card:hover .button {
+
+    z-index: 10;
+}
+
+.container_project .card:hover a {
+    opacity: 1;
+}
+
+.card .button:hover a {
+    color: white;
+}
+
+.card .button:hover {
+    background-color: black;
+}
+
+/*butão github*/
+.card .button_github {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    transform: translate(-40%, -70%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    transition: all 0.4s ease;
+
+
+
+
+}
+
+.button_github svg {
+    width: 50px;
+
+    height: 50px;
+
+}
+
+.card .button_github a {
+    color: #333;
+    display: flex;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.container_project .card:hover .button_github {
+
+    z-index: 10;
+}
+
+.container_project .card:hover a {
+    opacity: 1;
+}
+
+.card .button_github:hover a {
+    color: white;
+}
+
+.card .button_github:hover {
+    background-color: black;
 }
