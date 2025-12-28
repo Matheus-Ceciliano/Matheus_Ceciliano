@@ -1,3 +1,6 @@
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('.nav-list a');
+
 window.addEventListener('scroll', function(){
     let header = document.querySelector('.nav');
     header.classList.toggle('rolagem', window.scrollY > 0 );
@@ -5,9 +8,6 @@ window.addEventListener('scroll', function(){
 
 
 // 1. Seleciona todas as seções e os links do menu
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('.nav-list a');
-
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
