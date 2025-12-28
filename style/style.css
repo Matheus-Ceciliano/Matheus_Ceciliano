@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    /* font-family: 'Gemunu Libre', sans-serif;
+        font-weight: 200;
+        /* Importante: você só carregou o peso 200 (Extra Light) */
+    background-color: #222831;
+}
+
+
+
+/*NAV INICIO*/
+.nav {
+    /*background-color: #242524;*/
+    background-color: #0D0D0D;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: 0.01s ease;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    transition: 0.5s ease-in-out;
+
+}
+
+/*TITULO PRINCIPAL*/
+.titulo {
+    font-family: 'Gemunu Libre', sans-serif;
+    font-weight: 200;
+    color: #7cb3da;
+    justify-content: flex-end;
+    position: absolute;
+    left: 120px;
+    transition: 0.5s ease-in-out;
+
+
+
+}
+
+.titulo:hover {
+    color: #afd0e8;
+    cursor: pointer;
+
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #607e96;
+    position: relative;
+    padding: 15px;
+    transition: 0.5s ease-in-out;
+
+
+
+}
+
+/*INICIO LINKS*/
+.nav-list a span {
+
+    position: relative;
+}
+
+.nav-list a span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -2px;
+    width: 0%;
+    height: 3px;
+    background-color: #708b96;
+    transition: width 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.nav-list a:hover span::after {
+    color: #6a838d;
+    width: 110%;
+
+}
+
+.nav-list a:hover {
+    color: #90ad70;
+}
+
+
+
+/* --- ÍCONES SOCIAIS --- */
+
+.social-links {
+    position: absolute;
+    right: 160px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.social-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: #547e9f;
+    font-size: 1.5rem;
+    transition: 0.5s ease-in-out;
+
+}
+
+
+.social-links a:hover {
+    transform: translateY(-5px);
+
+}
+
+.social-links a.instagram:hover {
+    color: #d62976;
+
+}
+
+
+.social-links a.github:hover {
+    color: #ffffff;
+}
+
+
+.social-links a.linkedin:hover {
+    color: #0077b5;
+}
+
+.social-links a.twitter:hover {
+    color: #0016df;
+}
+
+
+.nav.rolagem .titulo,
+.nav.rolagem .nav-list a,
+.nav.rolagem .social-links a {
+    color: rgb(168, 168, 168)
+}
+
+.nav.rolagem {
+    background-color: rgba(0, 0, 0, 0.372);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+nav.rolagem .titulo:hover,
+.nav.rolagem .nav-list a:hover {
+    color: rgb(255, 255, 255);
+}
+
+nav.rolagem .social-links a.instagram:hover {
+    color: #d62976;
+
+}
+
+
+nav.rolagem .social-links a.github:hover {
+    color: #ffffff;
+}
+
+
+nav.rolagem .social-links a.linkedin:hover {
+    color: #0077b5;
+}
+
+nav.rolagem .social-links a.twitter:hover {
+    color: #0016df;
+}
+
+/*Main*/
+
+.main {
+    width: 100%;
+    height: calc(100vh - 50px);
+    /*background-image: url('/img/programador.png');*/
+    background-color: #0D0D0D;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.main h1 {
+    color: rgb(255, 255, 255);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    line-height: 49.5px;
+    font-size: 45px;
+}
+
+.main h4 {
+    color: #90ad70;
+    font-style: italic;
+    margin-bottom: 10px;
+
+}
+
+.call-to-action {
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 0;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 1s ease, letter-spacing 0.5s ease;
+}
+
+.call-to-action:hover {
+    transform: scale(1.1);
+
+}
+
+.main a {
+    text-decoration: none;
+    color: #181818;
+}
+
+.nav-list a.active span::after {
+    width: 100%;
+    /* Força a barra a aparecer completa */
+    background-color: #ffffff;
+    /* Garante que fique branca (ou a cor que preferir) */
+}
+
+/*FIm Main*/
+/*Sobre*/
+
+
+.about {
+    width: 100%;
+    background-color: #141414;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.about div {
+    max-width: 50%;
+    padding-right: 60px;
+}
+
+.about img {
+
+    max-width: 330px;
+    border-radius: 10px;
+    box-shadow: rgb(44, 44, 44) 0px 0px 20px 10px;
+    transition: 0.9s ease;
+
+}
+
+.about img:hover {
+    transform: scale(1.1);
+}
+
+.about div p {
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 16px;
+}
+
+.about div h2 {
+    color: #b9e08e;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+
+
+/*Projetos card*/
+.container_project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+
+
+}
+
+.projects {
+    background-color: #0D0D0D;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.projects h2 {
+    color: #9ec178;
+    font-style: italic;
+    font-size: 42px;
+    margin-top: 40px;
+    padding-left: 45%;
+    margin-bottom: 80px;
+
+}
+
+.container_project .card {
+    box-shadow: 8px 8px 8px 8px rgba(1, 0, 0, 0.4);
+    background-color: rgb(21, 21, 21);
+    display: block;
+    box-sizing: border-box;
+    flex-direction: column;
+
+    max-width: 30%;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.9s ease-in-out;
+}
+
+.container_project .card h3 {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.container_project .card img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: 180px;
+    margin-bottom: 40px;
+
+}
+
+
+.container_project .card .text {
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 18px;
+    padding-bottom: 30px;
+
+}
+
+.container_project .card .tex {
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 18px;
+    padding-bottom: 0;
+}
+
+.container_project .card .Tec {
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 18px;
+    padding-bottom: 0;
+}
+
+.container_project .card:hover {
+    transform: scale(1.1);
+}
