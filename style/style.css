@@ -190,36 +190,14 @@ nav.rolagem .social-links a.twitter:hover {
     background-size: cover;
     background-position: center;
     display: flex;
+
     align-items: center;
-    padding-left: 120px;
+    padding-left: 150px;
     justify-content: space-between;
 
 }
 
-.main .img-notebook {
-    width: 500px;
-    height: 500px;
-    position: relative;
-    background-color: #5f89a6;
-    border-radius: 50%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* 🔴 ESSENCIAL */
-
-    margin-right: 150px;
-    overflow: visible;
-
-}
-
-.main .img-notebook img {
-    width: 550px;
-    max-width: none;
-
-
-
-}
 
 
 .main h1 {
@@ -227,44 +205,71 @@ nav.rolagem .social-links a.twitter:hover {
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     letter-spacing: 0.5px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     line-height: 49.5px;
-    font-size: 45px;
+    font-size: 50px;
 }
 
 .main h4 {
     color: #90ad70;
     font-style: italic;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 22px;
 
+}
+
+.main p {
+    color: rgba(255, 255, 255, 0.66);
+    margin-bottom: 20px;
+    font-size: 30px;
+    padding-left: 20px;
+    text-decoration: none;
+
+
+}.texto-inicial a {
+    text-decoration: none;
 }
 
 .call-to-action {
-    cursor: pointer;
-    background-color: #ffffff;
-    border: 0;
-    padding: 15px 25px;
-    border-radius: 100px;
-    font-size: 18px;
+    position: relative;
+    display: inline-flex; /* Alinha ícone e texto na mesma linha */
+    align-items: center;
+    font-size: 25px;
     font-weight: bold;
-    transition: transform 1s ease, letter-spacing 0.5s ease;
+    color: #0e98e2;
+
+    padding: 10px 0; /* Ajuste o padding conforme necessário */
+    transition: color 0.3s ease;
+}
+
+.texto-btn {
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito elástico */
+}
+
+.icon {
+    position: absolute;
+    left: -40px; /* Começa bem longe à esquerda */
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* --- A MÁGICA DO EMPURRÃO --- */
+
+.call-to-action:hover .texto-btn {
+    /* O valor do translateX deve ser um pouco maior que a largura da seta */
+    transform: translateX(45px); 
+}
+
+.call-to-action:hover .icon {
+    left: 0; /* A seta assume o lugar onde o texto estava */
+    opacity: 1;
 }
 
 .call-to-action:hover {
-    transform: scale(1.1);
-
-}
-
-.main a {
-    text-decoration: none;
-    color: #181818;
-}
-
-.nav-list a.active span::after {
-    width: 100%;
-    /* Força a barra a aparecer completa */
-    background-color: #ffffff;
-    /* Garante que fique branca (ou a cor que preferir) */
+    color: #0a9dec;
 }
 
 /*FIm Main*/

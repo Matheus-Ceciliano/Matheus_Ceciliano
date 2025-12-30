@@ -10,8 +10,8 @@
 /* NOTEBOOK */
 .notebook-wrapper {
     position: relative;
-    width: 800px;
-    max-width: 95%;
+    width: 700px;
+    max-width: 90%;
     aspect-ratio: 16 / 10;
     border-radius: 10px;
     left: -35px;
