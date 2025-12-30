@@ -190,7 +190,7 @@ nav.rolagem .social-links a.twitter:hover {
     background-size: cover;
     background-position: center;
     display: flex;
-
+    flex-direction: row;
     align-items: center;
     padding-left: 150px;
     justify-content: space-between;
@@ -207,7 +207,7 @@ nav.rolagem .social-links a.twitter:hover {
     letter-spacing: 0.5px;
     margin-bottom: 5px;
     line-height: 49.5px;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .main h4 {
@@ -587,5 +587,76 @@ nav.rolagem .social-links a.twitter:hover {
     height: 35px;
     margin-top: 50px;
 
+
+}
+
+
+
+@media (min-width: 1650px){
+    .main h1{
+        font-size: 50px;
+    }
+
+
+}
+
+
+@media (max-width: 1100px){
+    .main{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+       
+    }
+
+    .main h4{
+        margin-top: 30px;
+        text-align: center;
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+
+    .main p{
+         margin-bottom: 5px;
+        padding-left: 0px;
+        font-size: 20px;
+
+    }
+
+    .main .call-to-action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+
+}
+
+
+@media (max-width: 850px){
+    
+    
+
+    .main h4{
+        margin-top: 30px;
+        text-align: center;
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+
+    .main p{
+         margin-bottom: 5px;
+        padding-left: 0px;
+        font-size: 20px;
+
+    }
+
+    .main .call-to-action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 5px;
+    }
 
 }

@@ -10,7 +10,7 @@
 /* NOTEBOOK */
 .notebook-wrapper {
     position: relative;
-    width: 700px;
+    width: 550px;
     max-width: 90%;
     aspect-ratio: 16 / 10;
     border-radius: 10px;
@@ -132,5 +132,33 @@
 @keyframes blink {
     50% {
         opacity: 0;
+    }
+}
+
+
+
+@media (min-width: 1650px){
+    /* NOTEBOOK */
+.notebook-wrapper {
+    position: relative;
+    max-width: 100%;
+    width: 950px;
+    left: -27px;
+
+}
+}
+
+@media (max-width: 1100px){
+    
+    .notebook-wrapper{
+       left: -10px;
+    }
+}
+
+@media (max-width: 850px){
+    
+    .notebook-wrapper{
+       left: -10px;
+       width: 4000px;
     }
 }
