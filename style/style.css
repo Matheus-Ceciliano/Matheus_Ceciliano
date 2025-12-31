@@ -207,7 +207,7 @@ nav.rolagem .social-links a.twitter:hover {
     letter-spacing: 0.5px;
     margin-bottom: 5px;
     line-height: 49.5px;
-    font-size: 40px;
+    font-size: 60px;
 }
 
 .main h4 {
@@ -300,6 +300,7 @@ nav.rolagem .social-links a.twitter:hover {
 .about div {
     max-width: 50%;
     padding-right: 60px;
+
 }
 
 .about img {
@@ -599,26 +600,27 @@ nav.rolagem .social-links a.twitter:hover {
 
 @media (min-width: 1650px) {
     .main h1 {
-        font-size: 50px;
+        font-size: 60px;
     }
+
 
 
 }
 
 
-@media (max-width: 1100px) {
+@media (max-width: 1023px) {
     .main {
-        display: flex;
+
         align-items: center;
         flex-direction: column;
-        justify-content: space-around;
-
-
-
+        justify-content: flex-start;
+        text-align: center;
+        padding: 1px 10px;
+        height: 50vh;
     }
 
     .main h4 {
-        margin-top: 30px;
+        margin-top: 10px;
         text-align: center;
         font-size: 17px;
         margin-bottom: 8px;
@@ -651,6 +653,8 @@ nav.rolagem .social-links a.twitter:hover {
     }
 }
 
+
+
 @media (max-width: 850px) {
     /*Main */
 
@@ -660,9 +664,7 @@ nav.rolagem .social-links a.twitter:hover {
         align-items: center;
         justify-content: flex-start;
         padding-left: 0;
-        height: 65vh;
-
-
+        height: 80vh
     }
 
     .main h4 {
@@ -674,6 +676,11 @@ nav.rolagem .social-links a.twitter:hover {
         align-items: center;
         justify-content: center;
         margin-top: 7%;
+    }
+
+    .main h1 {
+        font-size: 38px;
+
     }
 
 
@@ -691,16 +698,17 @@ nav.rolagem .social-links a.twitter:hover {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-left: 5%;
-        padding-right: 5%;
         position: relative;
+        padding-top: 6%;
+
 
 
     }
 
     .about div {
-        max-width: 100%;
+        max-width: 110%;
         margin-bottom: 7%;
+
 
     }
 
@@ -709,13 +717,17 @@ nav.rolagem .social-links a.twitter:hover {
         align-items: center;
         justify-content: center;
         font-size: 48px;
+
+
+
     }
 
-    .about img {
-        max-width: 320px;
+    .about div img {
+        max-width: 300px;
         display: block;
         margin: 0 auto;
         position: relative;
-        margin-right: 67px;
+        align-items: center;
+        justify-content: center;
     }
 }
