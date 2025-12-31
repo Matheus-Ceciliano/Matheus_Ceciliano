@@ -687,11 +687,13 @@ nav.rolagem .social-links a.twitter:hover {
 
     /*About*/
     .about {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding-left: 5%;
-        padding-right: 0%;
+        padding-right: 5%;
+        position: relative;
 
 
     }
@@ -709,5 +711,11 @@ nav.rolagem .social-links a.twitter:hover {
         font-size: 48px;
     }
 
-
+    .about img {
+        max-width: 320px;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        margin-right: 50px;
+    }
 }
