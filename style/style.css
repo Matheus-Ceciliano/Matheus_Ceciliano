@@ -781,4 +781,41 @@ nav.rolagem .social-links a.twitter:hover {
         height: auto;
         display: block;
     }
+
+    /*projects*/
+    .projects {
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+    .projects h2 {
+
+        font-size: 52px;
+        padding-left: 0;
+        text-align: center;
+
+
+    }
+
+    .container_project {
+        flex-direction: column;
+        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .container_project .card {
+        margin-bottom: 50px;
+        max-width: 82%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+    }
 }
