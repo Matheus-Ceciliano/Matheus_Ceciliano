@@ -344,7 +344,7 @@ nav.rolagem .social-links a.twitter:hover {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -607,6 +607,46 @@ nav.rolagem .social-links a.twitter:hover {
 
 }
 
+@media (max-width: 1050px) {
+
+    /*project*/
+    .projects {
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+    .projects h2 {
+
+        font-size: 52px;
+        padding-left: 0;
+        text-align: center;
+
+
+    }
+
+    .container_project {
+        flex-direction: column;
+        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .container_project .card {
+        margin-bottom: 50px;
+        max-width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+    }
+
+}
 
 @media (max-width: 1023px) {
     .main {
@@ -651,6 +691,9 @@ nav.rolagem .social-links a.twitter:hover {
         margin-bottom: 0;
 
     }
+
+
+
 
 }
 
