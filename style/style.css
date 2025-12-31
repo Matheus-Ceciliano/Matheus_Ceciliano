@@ -649,7 +649,7 @@ nav.rolagem .social-links a.twitter:hover {
 
 
 @media (max-width: 850px) {
-
+    /*Main */
 
     .main {
         justify-content: space-around;
@@ -657,7 +657,7 @@ nav.rolagem .social-links a.twitter:hover {
         align-items: center;
         justify-content: flex-start;
         padding-left: 0;
-        height: 70vh;
+        height: 65vh;
 
 
     }
@@ -673,9 +673,43 @@ nav.rolagem .social-links a.twitter:hover {
         margin-top: 7%;
     }
 
-    .main p {}
+
 
     .main .call-to-action {
         padding-bottom: 15%;
+    }
+
+    /*FIm Main*/
+
+
+    /*About*/
+    .about {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5%;
+        padding-right: 0%;
+
+
+    }
+
+    .about div {
+        max-width: 100%;
+        margin-bottom: 7%;
+
+    }
+
+    .about div h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+    }
+
+    .about img {
+        margin-right: 55px;
+
+
+
     }
 }
