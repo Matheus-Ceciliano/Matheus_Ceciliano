@@ -610,39 +610,41 @@ nav.rolagem .social-links a.twitter:hover {
 @media (max-width: 1050px) {
 
     /*project*/
-    .projects {
-        justify-content: center;
-        padding-left: 0;
-        padding-right: 0;
+    .container_project {
+        flex-direction: column;
+        /* Empilha os cards */
+        align-items: center;
+        /* Centraliza os cards */
+        gap: 40px;
+        /* Espaço entre um card e outro */
+    }
 
+    /* 2. O Card deixa de ser 30% e vira 100% */
+    .container_project .card {
+        max-width: 100%;
+        /* Ocupa a largura toda disponível */
+        width: 100%;
+    }
+
+    /* 3. Ajuste da Imagem no Mobile */
+    .card .img img {
+        height: auto;
+        /* No celular, deixa a altura automática para mostrar a imagem toda */
+        max-height: 250px;
+        /* Mas com um limite para não ficar gigante */
+        margin-bottom: 20px;
+    }
+
+    /* 4. Ajustes de Espaçamento da Seção */
+    .projects {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     .projects h2 {
-
-        font-size: 52px;
-        padding-left: 0;
-        text-align: center;
-
-
-    }
-
-    .container_project {
-        flex-direction: column;
-        justify-content: space-between;
-        justify-content: center;
-        align-items: center;
-
-
-    }
-
-    .container_project .card {
-        margin-bottom: 50px;
-        max-width: 60%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-
+        font-size: 32px;
+        /* Diminui a fonte do título */
+        margin-bottom: 40px;
 
     }
 
