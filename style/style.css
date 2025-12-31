@@ -619,18 +619,22 @@ nav.rolagem .social-links a.twitter:hover {
         height: 50vh;
     }
 
+    .main h1 {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
     .main h4 {
-        margin-top: 10px;
-        text-align: center;
-        font-size: 17px;
-        margin-bottom: 8px;
+        margin-top: 20px;
+        font-size: 18px;
     }
 
     .main p {
-        margin-bottom: 5px;
-        padding-left: 0px;
-        font-size: 20px;
-
+        padding-left: 0;
+        /* Remove o padding lateral que empurrava o texto */
+        font-size: 18px;
+        max-width: 600px;
+        /* Evita que a linha de texto fique muito longa e cansativa */
     }
 
     .main .call-to-action {
@@ -659,6 +663,7 @@ nav.rolagem .social-links a.twitter:hover {
     /*Main */
 
     .main {
+        padding-top: 100px;
         justify-content: space-around;
         display: flex;
         align-items: center;
@@ -706,8 +711,9 @@ nav.rolagem .social-links a.twitter:hover {
     }
 
     .about div {
-        max-width: 110%;
+        max-width: 100%;
         margin-bottom: 7%;
+        padding-right: 0;
 
 
     }
@@ -723,11 +729,10 @@ nav.rolagem .social-links a.twitter:hover {
     }
 
     .about div img {
-        max-width: 300px;
+        margin: 0 auto 30px auto;
+        width: 100%;
+        max-width: 250px;
+        height: auto;
         display: block;
-        margin: 0 auto;
-        position: relative;
-        align-items: center;
-        justify-content: center;
     }
 }
