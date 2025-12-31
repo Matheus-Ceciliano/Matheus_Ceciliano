@@ -614,6 +614,7 @@ nav.rolagem .social-links a.twitter:hover {
         flex-direction: column;
         align-items: center;
         gap: 40px;
+        justify-content: center;
 
     }
 
@@ -648,7 +649,16 @@ nav.rolagem .social-links a.twitter:hover {
     .card .button_github {
         left: 23%;
     }
+
+
+    .shortly-container .shortly {
+        width: 85%;
+        left: 20px;
+
+    }
+
 }
+
 
 @media (max-width: 1023px) {
     .main {
@@ -819,5 +829,19 @@ nav.rolagem .social-links a.twitter:hover {
 
 
 
+    }
+
+    .shortly-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .shortly-container .shortly {
+        width: 85%;
+        text-align: center;
+        margin: 0 auto;
     }
 }
