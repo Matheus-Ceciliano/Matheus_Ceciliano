@@ -611,12 +611,15 @@ nav.rolagem .social-links a.twitter:hover {
 @media (max-width: 1023px) {
     .main {
 
+        display: flex;
+        /* Garante que o flex funcione */
         align-items: center;
         flex-direction: column;
         justify-content: flex-start;
         text-align: center;
-        padding: 1px 10px;
-        height: 50vh;
+        min-height: auto;
+        height: auto;
+        padding: 80px 10px 40px 10px;
     }
 
     .main h1 {
@@ -663,13 +666,13 @@ nav.rolagem .social-links a.twitter:hover {
     /*Main */
 
     .main {
-        padding-top: 100px;
+        padding-top: 50px;
         justify-content: space-around;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         padding-left: 0;
-        height: 80vh
+
     }
 
     .main h4 {
