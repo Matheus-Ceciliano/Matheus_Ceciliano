@@ -226,30 +226,36 @@ nav.rolagem .social-links a.twitter:hover {
     text-decoration: none;
 
 
-}.texto-inicial a {
+}
+
+.texto-inicial a {
     text-decoration: none;
 }
 
 .call-to-action {
     position: relative;
-    display: inline-flex; /* Alinha ícone e texto na mesma linha */
+    display: inline-flex;
+    /* Alinha ícone e texto na mesma linha */
     align-items: center;
     font-size: 25px;
     font-weight: bold;
     color: #0e98e2;
 
-    padding: 10px 0; /* Ajuste o padding conforme necessário */
+    padding: 10px 0;
+    /* Ajuste o padding conforme necessário */
     transition: color 0.3s ease;
 }
 
 .texto-btn {
     display: inline-block;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito elástico */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Efeito elástico */
 }
 
 .icon {
     position: absolute;
-    left: -40px; /* Começa bem longe à esquerda */
+    left: -40px;
+    /* Começa bem longe à esquerda */
     opacity: 0;
     display: flex;
     align-items: center;
@@ -260,11 +266,12 @@ nav.rolagem .social-links a.twitter:hover {
 
 .call-to-action:hover .texto-btn {
     /* O valor do translateX deve ser um pouco maior que a largura da seta */
-    transform: translateX(45px); 
+    transform: translateX(45px);
 }
 
 .call-to-action:hover .icon {
-    left: 0; /* A seta assume o lugar onde o texto estava */
+    left: 0;
+    /* A seta assume o lugar onde o texto estava */
     opacity: 1;
 }
 
@@ -592,8 +599,8 @@ nav.rolagem .social-links a.twitter:hover {
 
 
 
-@media (min-width: 1650px){
-    .main h1{
+@media (min-width: 1650px) {
+    .main h1 {
         font-size: 50px;
     }
 
@@ -601,24 +608,26 @@ nav.rolagem .social-links a.twitter:hover {
 }
 
 
-@media (max-width: 1100px){
-    .main{
+@media (max-width: 1100px) {
+    .main {
         display: flex;
         align-items: center;
         flex-direction: column;
-        height: 100vh;
-       
+        justify-content: space-around;
+
+
+
     }
 
-    .main h4{
+    .main h4 {
         margin-top: 30px;
         text-align: center;
         font-size: 17px;
         margin-bottom: 8px;
     }
 
-    .main p{
-         margin-bottom: 5px;
+    .main p {
+        margin-bottom: 5px;
         padding-left: 0px;
         font-size: 20px;
 
@@ -628,35 +637,45 @@ nav.rolagem .social-links a.twitter:hover {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-bottom: 30px;
+
+    }
+
+    .main .texto-inicial {
+        margin-bottom: 0;
+
     }
 
 }
 
 
-@media (max-width: 850px){
-    
-    
+@media (max-width: 850px) {
 
-    .main h4{
-        margin-top: 30px;
+
+    .main {
+        justify-content: space-around;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 0;
+        height: 70vh;
+
+
+    }
+
+    .main h4 {
+
         text-align: center;
-        font-size: 17px;
+        font-size: 19px;
         margin-bottom: 8px;
-    }
-
-    .main p{
-         margin-bottom: 5px;
-        padding-left: 0px;
-        font-size: 20px;
-
-    }
-
-    .main .call-to-action {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-bottom: 5px;
+        margin-top: 7%;
     }
 
+    .main p {}
+
+    .main .call-to-action {
+        padding-bottom: 15%;
+    }
 }
