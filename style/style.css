@@ -1329,8 +1329,8 @@
 
         /*Conhecimentos*/
         .container_tec {
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            width: 40%;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            width: 100%;
         }
 
         .tecnologias h2 {
