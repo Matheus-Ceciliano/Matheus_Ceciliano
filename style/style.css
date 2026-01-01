@@ -650,7 +650,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 25px;
-        width: 58%;
+        width: 60%;
         align-items: center;
         justify-content: center;
         margin: 0 auto;
@@ -1327,6 +1327,15 @@
         }
 
 
+        /*Conhecimentos*/
+        .container_tec {
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        }
+
+        .tecnologias h2 {
+            font-size: 32px;
+            margin: 30px 0 50px;
+        }
 
     }
 
@@ -1457,5 +1466,13 @@
             width: 85%;
             text-align: center;
             margin: 0 auto;
+        }
+    }
+
+
+    @media (max-width: 480px) {
+        .tecnologias h2 {
+            font-size: 26px;
+            margin: 20px 0 40px;
         }
     }
