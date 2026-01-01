@@ -383,9 +383,8 @@
         color: #9ec178;
         font-style: italic;
         font-size: 42px;
-        margin-top: 40px;
-        padding-left: 45%;
-        margin-bottom: 80px;
+        margin: 40px 0 80px;
+        text-align: center;
 
     }
 
@@ -609,7 +608,7 @@
     }
 
     .shortly p {
-        color: white;
+
         color: rgba(255, 255, 255, 0.66);
 
 
@@ -623,6 +622,456 @@
 
 
     }
+
+
+    /*CONHECIMENTOS */
+
+    .tecnologias {
+        width: 100%;
+        margin: 0px auto;
+        padding: 100px 20px;
+        background-color: #141414;
+        margin: 0 auto;
+
+    }
+
+    .tecnologias h2 {
+        color: #9ec178;
+
+        font-style: italic;
+        font-size: 52px;
+        margin: 40px 0 80px;
+        text-align: center;
+
+
+    }
+
+    .container_tec {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 25px;
+        width: 58%;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+
+
+    }
+
+    .card-tec {
+        background: rgba(28, 28, 32, 0.43);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 35px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        cursor: default;
+        position: relative;
+        overflow: hidden;
+        transition: 0.4s;
+
+    }
+
+    /*Animação fundo*/
+    .card-tec .glow_js {
+        position: absolute;
+        inset: 0;
+        background: rgb(247, 223, 30);
+        opacity: 0;
+        filter: blur(50px);
+        z-index: 1;
+        transition: 0.4s;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    .card-tec .glow_html {
+        position: absolute;
+        inset: 0;
+        background: rgb(227, 79, 38);
+        opacity: 0;
+        filter: blur(50px);
+        z-index: 1;
+        transition: 0.4s;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    .card-tec .glow_css {
+        position: absolute;
+        inset: 0;
+        background: rgb(6, 117, 197);
+        opacity: 0;
+        filter: blur(70px);
+        z-index: 1;
+        transition: 0.4s;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    .card-tec .glow_react {
+        position: absolute;
+        inset: 0;
+        background: rgb(97, 218, 251);
+        opacity: 0;
+        filter: blur(60px);
+        z-index: 1;
+        transition: 0.4s;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    .card-tec .glow_git {
+        position: absolute;
+        inset: 0;
+        background: rgb(240, 80, 50);
+        opacity: 0;
+        filter: blur(50px);
+        z-index: 1;
+        transition: 0.4s;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+
+    .card-tec .glow_py {
+        position: absolute;
+        inset: 0;
+        background: rgb(55, 118, 171);
+        opacity: 0;
+        filter: blur(50px);
+        z-index: 1;
+        transition: 0.4s;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    .card-tec .glow_node {
+        position: absolute;
+        inset: 0;
+        background: rgb(51, 153, 51);
+        opacity: 0;
+        filter: blur(50px);
+        z-index: 1;
+        transition: 0.4s;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    .card-tec .glow_tailan {
+        position: absolute;
+        inset: 0;
+        background: rgb(56, 178, 172);
+        opacity: 0;
+        filter: blur(50px);
+        z-index: 1;
+        transition: 0.4s;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    .card-tec .glow_type {
+        position: absolute;
+        inset: 0;
+        background: rgb(49, 120, 198);
+        opacity: 0;
+        filter: blur(50px);
+        z-index: 1;
+        transition: 0.4s;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    /*Fim animação */
+    .card-tec h4 {
+        color: rgba(255, 255, 255, 0.66);
+
+    }
+
+    .html svg {
+        font-size: 4rem;
+        color: rgb(227, 79, 38);
+        filter: saturate(0.5) brightness(0.8);
+        transition: 0.4s;
+        z-index: 2;
+    }
+
+    .css svg {
+        font-size: 4rem;
+        color: rgb(21, 114, 182);
+        filter: saturate(0.5) brightness(0.8);
+        transition: 0.4s;
+        z-index: 2;
+    }
+
+    .js svg {
+        font-size: 4rem;
+        color: rgb(247, 223, 30);
+        filter: saturate(0.5) brightness(0.8);
+        transition: 0.4s;
+        z-index: 2;
+    }
+
+    .React svg {
+        font-size: 4rem;
+        color: rgb(97, 218, 251);
+        filter: saturate(0.5) brightness(0.8);
+        transition: 0.4s;
+        z-index: 2;
+
+    }
+
+    .git svg {
+        font-size: 4rem;
+        color: rgb(240, 80, 50);
+        filter: saturate(0.5) brightness(0.8);
+        transition: 0.4s;
+        z-index: 2;
+
+    }
+
+    .py svg {
+        font-size: 4rem;
+        color: rgb(55, 118, 171);
+        filter: saturate(0.5) brightness(0.8);
+        transition: 0.4s;
+        z-index: 2;
+
+
+    }
+
+    .node svg {
+        font-size: 4rem;
+        color: rgb(51, 153, 51);
+        filter: saturate(0.5) brightness(0.8);
+        transition: 0.4s;
+        z-index: 2;
+
+    }
+
+    .tailan svg {
+        font-size: 4rem;
+        color: rgb(56, 178, 172);
+        filter: saturate(0.5) brightness(0.8);
+        transition: 0.4s;
+        z-index: 2;
+
+    }
+
+    .type svg {
+        font-size: 4rem;
+        color: rgb(49, 120, 198);
+        filter: saturate(0.5) brightness(0.8);
+        transition: 0.4s;
+        z-index: 2;
+
+    }
+
+    /*Hover- Html*/
+
+    .html:hover .svg-html {
+        transform: scale(1.1);
+        color: rgb(227, 79, 38);
+        filter: saturate(1) brightness(1);
+
+
+    }
+
+    .html:hover .glow_html {
+        opacity: 0.3;
+    }
+
+    .html:hover {
+        border: solid 1px rgb(227, 79, 38);
+    }
+
+
+    /*Hover CSS*/
+    .css:hover .svg-css {
+        transform: scale(1.1);
+        color: rgb(21, 114, 182);
+        filter: saturate(1) brightness(1);
+
+
+    }
+
+    .css:hover .glow_css {
+        opacity: 0.9;
+    }
+
+    .css:hover {
+        border: solid 1px rgb(21, 114, 182);
+    }
+
+
+    /*Hover Java Script*/
+
+    .js:hover .svg-js {
+        transform: scale(1.1);
+        color: rgb(247, 223, 30);
+        filter: saturate(1) brightness(1);
+
+
+    }
+
+    .js:hover .glow_js {
+        opacity: 0.3;
+    }
+
+    .js:hover {
+        border: solid 1px rgb(247, 223, 30);
+    }
+
+    /*React Hover*/
+
+    .React:hover .svg-react {
+        transform: scale(1.1);
+        color: rgb(97, 218, 251);
+        filter: saturate(1) brightness(1);
+
+
+    }
+
+    .React:hover .glow_react {
+        opacity: 0.5;
+    }
+
+    .React:hover {
+        border: solid 1px rgb(97, 218, 251);
+    }
+
+    /*React Git*/
+
+    .git:hover .svg-git {
+        transform: scale(1.1);
+        color: rgb(240, 80, 50);
+        filter: saturate(1) brightness(1);
+
+
+    }
+
+    .git:hover .glow_git {
+        opacity: 0.3;
+    }
+
+    .git:hover {
+        border: solid 1px rgb(240, 80, 50);
+    }
+
+    /*React Py*/
+
+    .py:hover .svg-py {
+        transform: scale(1.1);
+        color: rgb(55, 118, 171);
+        filter: saturate(1) brightness(1);
+
+
+    }
+
+    .py:hover .glow_py {
+        opacity: 0.7;
+    }
+
+    .py:hover {
+        border: solid 1px rgb(55, 118, 171);
+    }
+
+
+    /*React Node*/
+
+    .node:hover .svg-node {
+        transform: scale(1.1);
+        color: rgb(51, 153, 51);
+        filter: saturate(1) brightness(1);
+
+
+    }
+
+    .node:hover .glow_node {
+        opacity: 0.7;
+    }
+
+    .node:hover {
+        border: solid 1px rgb(51, 153, 51);
+    }
+
+
+
+    /*React Tailan*/
+
+    .tailan:hover .svg-tailan {
+        transform: scale(1.1);
+        color: rgb(56, 178, 172);
+        filter: saturate(1) brightness(1);
+
+
+    }
+
+    .tailan:hover .glow_tailan {
+        opacity: 0.7;
+    }
+
+    .tailan:hover {
+        border: solid 1px rgb(56, 178, 172);
+    }
+
+    /*React Type*/
+
+    .type:hover .svg-type {
+        transform: scale(1.1);
+        color: rgb(49, 120, 198);
+        filter: saturate(1) brightness(1);
+
+
+    }
+
+    .type:hover .glow_type {
+        opacity: 0.7;
+    }
+
+    .type:hover {
+        border: solid 1px rgb(49, 120, 198);
+    }
+
+
 
 
 
