@@ -554,7 +554,26 @@
         margin-top: 20px;
     }
 
+    /* Estado de loading/animação */
+    .download-button.loading ul {
+        animation: text calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+    }
 
+    /* TRAVA DEFINITIVA: Quando terminar, mantemos o estado final travado no Open File */
+    .download-button.finished ul {
+        transform: translateY(-200%) !important;
+        animation: none !important;
+    }
+
+    .download-button.finished .icon:after {
+        transform: scaleY(1) !important;
+        border-radius: 0 !important;
+        animation: none !important;
+    }
+
+    .download-button.finished .icon:before {
+        display: none !important;
+    }
 
     /*FIm Main*/
 
@@ -1846,14 +1865,20 @@
 
         /* Ajuste fino das posições dos textos no mobile */
         .download-button ul li:not(:first-child) {
-            top: 10px;
+            top: 0;
+            /* Alinhado ao topo do container */
+            left: 0;
+            right: 0;
+            position: absolute;
         }
 
         .download-button ul li:nth-child(2) {
-            top: 54px;
+            top: 100%;
+            /* Exatamente abaixo do primeiro */
         }
 
         .download-button ul li:nth-child(3) {
-            top: 98px;
+            top: 200%;
+            /* Exatamente abaixo do segundo */
         }
     }

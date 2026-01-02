@@ -25,54 +25,53 @@ document.querySelectorAll('.download-button').forEach(button => {
     button.addEventListener('click', e => {
         e.preventDefault();
 
-        if (!button.classList.contains('loading')) {
-            button.classList.add('loading');
-
-            // Animação do SVG usando GSAP
-            gsap.to(svgPath, {
-                smoothing: .3,
-                duration: duration * .065 / 1000
-            });
-
-            gsap.to(svgPath, {
-                y: 12,
-                duration: duration * .265 / 1000,
-                delay: duration * .065 / 1000,
-                ease: "elastic.out(1.12, 0.4)"
-            });
-
-            setTimeout(() => {
-                svg.innerHTML = getPath(0, 0, [
-                    [3, 14],
-                    [8, 19],
-                    [21, 6]
-                ]);
-            }, duration / 2);
-
-            // Lógica de Download após a animação
-            setTimeout(() => {
-                button.classList.remove('loading');
-
-                const link = document.createElement('a');
-                // DICA: Tente renomear seu arquivo PDF para algo simples como 'curriculo.pdf'
-                link.href = '/documentos/matheus.duartececiliano.pdf';
-                link.download = 'Curriculo_Matheus.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-
-                // Resetar o ícone após o download para permitir novo clique
-                setTimeout(() => {
-                    svgPath.y = 20;
-                    svgPath.smoothing = 0;
-                    svg.innerHTML = '<path d="M4,12 L12,20 L20,12" />'; // Volta ao ícone original
-                }, 1000);
-
-            }, duration);
+        // Se já estiver carregando ou finalizado, não faz nada
+        if (button.classList.contains('loading') || button.classList.contains('finished')) {
+            return;
         }
+
+        button.classList.add('loading');
+
+        // Animação do SVG usando GSAP
+        gsap.to(svgPath, {
+            smoothing: .3,
+            duration: duration * .065 / 1000
+        });
+
+        gsap.to(svgPath, {
+            y: 12,
+            duration: duration * .265 / 1000,
+            delay: duration * .065 / 1000,
+            ease: "elastic.out(1.12, 0.4)"
+        });
+
+        // Muda para o ícone de "Check" no meio da animação
+        setTimeout(() => {
+            svg.innerHTML = getPath(0, 0, [
+                [3, 14],
+                [8, 19],
+                [21, 6]
+            ]);
+        }, duration / 2);
+
+        // Finalização da animação e Download
+        setTimeout(() => {
+            button.classList.remove('loading');
+            button.classList.add('finished'); // Trava o botão no estado final
+
+            // Inicia o download
+            const link = document.createElement('a');
+            link.href = '/documentos/matheus.duartececiliano.pdf';
+            link.download = 'Curriculo_Matheus.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+        }, duration);
     });
 });
 
+// Funções auxiliares para o desenho do SVG
 function getPoint(point, i, a, smoothing) {
     let cp = (current, previous, next, reverse) => {
         let p = previous || current,
