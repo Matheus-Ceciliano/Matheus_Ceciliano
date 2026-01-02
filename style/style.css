@@ -1873,12 +1873,12 @@
         }
 
         .download-button ul li:nth-child(2) {
-            top: 100%;
+            top: 57px;
             /* Exatamente abaixo do primeiro */
         }
 
         .download-button ul li:nth-child(3) {
-            top: 200%;
+            top: 102px;
             /* Exatamente abaixo do segundo */
         }
     }
