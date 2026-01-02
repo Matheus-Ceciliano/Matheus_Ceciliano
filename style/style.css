@@ -1996,13 +1996,13 @@
         }
 
         .download-button ul li:nth-child(2) {
-            top: 56px;
+            top: 54px;
 
             /* Exatamente abaixo do primeiro */
         }
 
         .download-button ul li:nth-child(3) {
-            top: 102px;
+            top: 100px;
 
             /* Exatamente abaixo do segundo */
         }
