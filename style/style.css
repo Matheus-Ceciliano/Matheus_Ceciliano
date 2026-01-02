@@ -1870,15 +1870,18 @@
             left: 0;
             right: 0;
             position: absolute;
+            font-size: 20px;
         }
 
         .download-button ul li:nth-child(2) {
             top: 58px;
+            font-size: 20px;
             /* Exatamente abaixo do primeiro */
         }
 
         .download-button ul li:nth-child(3) {
             top: 104px;
+            font-size: 20px;
             /* Exatamente abaixo do segundo */
         }
     }
