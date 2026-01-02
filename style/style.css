@@ -1489,54 +1489,51 @@
 
     }
 
-    .wrapper .coluna1 p {
+    .coluna1 p {
         font-size: 12px;
         padding-left: 90px;
         padding-bottom: 60px;
     }
 
-    .colunab {
+    .wrapper .colunab {
         flex: 1;
         display: flex;
         justify-content: flex-end;
         align-items: center;
     }
 
-    .social-links-footer {
+    .colunab .social_links_footer {
         display: flex;
         gap: 20px;
     }
 
-    .social-links-footer a {
+    .colunab .social_links_footer a {
+        display: inline-block;
         text-decoration: none;
-        color: #ffffff;
-        font-size: 24px;
-        /* Tamanho dos ícones Remix Icon */
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        color: #547e9f;
+        font-size: 1.8rem;
+        transition: 0.5s ease-in-out;
     }
 
     /* Efeitos de Hover */
-    .social-links-footer a:hover {
+    .colunab .social_links_footer a:hover {
         transform: translateY(-5px);
     }
 
-    .social-links-footer a.instagram:hover {
+    .colunab .social_links_footer .instagram:hover {
         color: #d62976;
     }
 
-    .social-links-footer a.github:hover {
+    .colunab social_links_footer .github:hover {
         color: #4FD1C5;
     }
 
     /* Usando o ciano do seu site */
-    .social-links-footer a.linkedin:hover {
+    .colunab .social_links_footer .linkedin:hover {
         color: #0077b5;
     }
 
-    .social-links-footer a.twitter:hover {
+    .colunab .social_links_footer .twitter:hover {
         color: #ffffff;
         opacity: 0.8;
     }
