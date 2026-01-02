@@ -1514,7 +1514,7 @@
     }
 
     /* Remove o sublinhado azul padrão e define a cor branca */
-    .social-links-footer a {
+    .colunab .social-links-footer a {
         text-decoration: none !important;
         color: #ffffff !important;
         font-size: 1.6rem !important;
