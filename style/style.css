@@ -166,6 +166,23 @@
         color: rgb(255, 255, 255);
     }
 
+    .nav-list a.active {
+        color: #90ad70;
+    }
+
+    .nav-list a.active span::after {
+        width: 100%;
+    }
+
+    /* mantém ativo mesmo com rolagem */
+    .nav.rolagem .nav-list a.active {
+        color: #ffffff;
+    }
+
+    .nav.rolagem .nav-list a.active span::after {
+        width: 100%;
+    }
+
     nav.rolagem .social-links a.instagram:hover {
         color: #d62976;
 
@@ -257,53 +274,285 @@
         text-decoration: none;
     }
 
-    .call-to-action {
-        position: relative;
+    .button {
         display: inline-flex;
-        /* Alinha ícone e texto na mesma linha */
-        align-items: center;
-        font-size: 25px;
-        font-weight: bold;
-        color: #0e98e2;
-
-        padding: 10px 0;
-        /* Ajuste o padding conforme necessário */
-        transition: color 0.3s ease;
+        flex-shrink: 0;
     }
 
-    .texto-btn {
-        display: inline-block;
-        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        /* Efeito elástico */
+    .button ul {
+        min-width: 180px;
+        height: 28px;
+        line-height: 28px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: center;
     }
 
-    .icon {
-        position: absolute;
-        left: -40px;
-        /* Começa bem longe à esquerda */
-        opacity: 0;
+    .button li {
+        height: 28px;
+        line-height: 28px;
+    }
+
+    /* ===== BOTÃO DE DOWNLOAD ANIMADO ===== */
+
+    /* Variantes de tema do botão */
+    .download-button.dark-single {
+        --background: none;
+        --rectangle: #242836;
+        --success: #4BC793;
+    }
+
+    .download-button.white-single {
+        --background: none;
+        --rectangle: #F5F9FF;
+        --arrow: #275efe;
+        --success: #275efe;
+        --shadow: rgba(10, 22, 50, .1);
+    }
+
+    .download-button.dark {
+        --background: #242836;
+        --rectangle: #1C212E;
+        --arrow: #F5F9FF;
+        --text: #F5F9FF;
+        --success: #2F3545;
+    }
+
+    /* Estilo base do botão de download */
+    .download-button {
+        --background: #275efe;
+        --rectangle: #184fee;
+        --success: #3d6aef;
+        --text: #fff;
+        --arrow: #fff;
+        --checkmark: #fff;
+        --shadow: rgba(10, 22, 50, .24);
+        max-width: 164px;
         display: flex;
-        align-items: center;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        overflow: hidden;
+        text-decoration: none;
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
+        background: var(--background);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px -1px var(--shadow);
+        transition: transform .2s ease, box-shadow .2s ease;
     }
 
-    /* --- A MÁGICA DO EMPURRÃO --- */
-
-    .call-to-action:hover .texto-btn {
-        /* O valor do translateX deve ser um pouco maior que a largura da seta */
-        transform: translateX(45px);
+    .download-button:active {
+        transform: scale(.95);
+        box-shadow: 0 1px 4px -1px var(--shadow);
     }
 
-    .call-to-action:hover .icon {
+    /* Lista de textos do botão */
+    .download-button ul {
+        margin: 0;
+        padding: 12px 28px;
+        list-style: none;
+        text-align: center;
+        position: relative;
+        backface-visibility: hidden;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        color: var(--text);
+    }
+
+    .download-button ul li:not(:first-child) {
+        top: 12px;
         left: 0;
-        /* A seta assume o lugar onde o texto estava */
-        opacity: 1;
+        right: 0;
+        position: absolute;
     }
 
-    .call-to-action:hover {
-        color: #0a9dec;
+    .download-button ul li:nth-child(2) {
+        top: 60px;
     }
 
+    .download-button ul li:nth-child(3) {
+        top: 115px;
+    }
+
+    /* Ícone do botão */
+    .download-button .icon {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background: var(--rectangle);
+    }
+
+    .download-button .icon:before,
+    .download-button .icon:after {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+
+    /* Seta/linha do ícone */
+    .download-button .icon:before {
+        border-radius: 1px;
+        width: 2px;
+        top: 50%;
+        left: 50%;
+        height: 17px;
+        margin: -9px 0 0 -1px;
+        background: var(--arrow);
+    }
+
+    /* Fundo de sucesso */
+    .download-button .icon:after {
+        width: 50px;
+        height: 50px;
+        transform-origin: 50% 0;
+        border-radius: 0 0 80% 80%;
+        background: var(--success);
+        top: 0;
+        left: 0;
+        transform: scaleY(0);
+    }
+
+    /* SVG do ícone */
+    .download-button .icon svg {
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 50%;
+        top: 55%;
+        margin: -9px 0 0 -10px;
+        fill: none;
+        z-index: 1;
+        stroke-width: 2px;
+        stroke: var(--arrow);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    /* Estado de loading/animação */
+    .download-button.loading ul {
+        animation: text calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+    }
+
+    .download-button.loading .icon:before {
+        animation: line calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+    }
+
+    .download-button.loading .icon:after {
+        animation: background calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+    }
+
+    .download-button.loading .icon svg {
+        animation: svg calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+    }
+
+    /* ===== ANIMAÇÕES ===== */
+
+    @keyframes text {
+
+        10%,
+        85% {
+            transform: translateY(-100%);
+        }
+
+        95%,
+        100% {
+            transform: translateY(-200%);
+        }
+    }
+
+    @keyframes line {
+
+        5%,
+        10% {
+            transform: translateY(-30px);
+        }
+
+        40% {
+            transform: translateY(-20px);
+        }
+
+        65% {
+            transform: translateY(0);
+        }
+
+        75%,
+        100% {
+            transform: translateY(30px);
+        }
+    }
+
+    @keyframes svg {
+
+        0%,
+        20% {
+            stroke-dasharray: 0;
+            stroke-dashoffset: 0;
+        }
+
+        21%,
+        89% {
+            stroke-dasharray: 26px;
+            stroke-dashoffset: 26px;
+            stroke-width: 3px;
+            margin: -10px 0 0 -10px;
+            stroke: var(--checkmark);
+        }
+
+        100% {
+            stroke-dasharray: 26px;
+            stroke-dashoffset: 0;
+            margin: -10px 0 0 -10px;
+            stroke: var(--checkmark);
+        }
+
+        12% {
+            opacity: 1;
+        }
+
+        20%,
+        89% {
+            opacity: 0;
+        }
+
+        90%,
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes background {
+        10% {
+            transform: scaleY(0);
+        }
+
+        40% {
+            transform: scaleY(.15);
+        }
+
+        65% {
+            transform: scaleY(.5);
+            border-radius: 0 0 50% 50%;
+        }
+
+        75% {
+            border-radius: 0 0 50% 50%;
+        }
+
+        90%,
+        100% {
+            border-radius: 0;
+        }
+
+        75%,
+        100% {
+            transform: scaleY(1);
+        }
+    }
+
+    /* ===== ESTILOS ADICIONAIS PARA O WRAPPER ===== */
+
+    .cta-wrapper {
+        margin-top: 20px;
+    }
 
 
 
@@ -1555,5 +1804,56 @@
         .tecnologias h2 {
             font-size: 26px;
             margin: 20px 0 40px;
+        }
+    }
+
+
+    /* ===== RESPONSIVIDADE PARA CELULARES ===== */
+
+    @media (max-width: 480px) {
+        .download-button {
+            width: 100%;
+            max-width: 280px;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            /* Centraliza horizontalmente e adiciona 10px de margem inferior */
+            display: flex;
+            /* Garante que o margin auto funcione */
+        }
+
+        .cta-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .download-button ul {
+            padding: 10px 16px;
+            font-size: 13px;
+            flex-grow: 1;
+        }
+
+        .download-button .icon {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+        }
+
+        .download-button .icon:after {
+            width: 44px;
+            height: 44px;
+        }
+
+        /* Ajuste fino das posições dos textos no mobile */
+        .download-button ul li:not(:first-child) {
+            top: 10px;
+        }
+
+        .download-button ul li:nth-child(2) {
+            top: 54px;
+        }
+
+        .download-button ul li:nth-child(3) {
+            top: 98px;
         }
     }

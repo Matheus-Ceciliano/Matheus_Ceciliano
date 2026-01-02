@@ -1,37 +1,33 @@
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('.nav-list a');
+// Seletores principais
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-list a');
+const header = document.querySelector('.nav');
 
-window.addEventListener('scroll', function () {
-    let header = document.querySelector('.nav');
-    header.classList.toggle('rolagem', window.scrollY > 0);
-});
+// Scroll único e estável
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
 
+    // Efeito de rolagem no header
+    header.classList.toggle('rolagem', scrollTop > 0);
 
-// 1. Seleciona todas as seções e os links do menu
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150; // -150 é um desconto por causa da altura do header fixo
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+    sections.forEach(section => {
+        const offset = section.offsetTop - 150; // ajuste pela altura do header
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
 
-        // Se a posição atual do scroll estiver DENTRO desta seção
-        if (top >= offset && top < offset + height) {
+        if (scrollTop >= offset && scrollTop < offset + height) {
 
-            // Remove a classe 'active' de TODOS os links primeiro
-            navLinks.forEach(links => {
-                links.classList.remove('active');
+            // Remove active de todos
+            navLinks.forEach(link => link.classList.remove('active'));
 
-                // Remove também do span se necessário, mas tirando do 'a' já resolve pelo CSS
-            });
+            // Adiciona active no link correto
+            const currentLink = document.querySelector(
+                `.nav-list a[href*="${id}"]`
+            );
 
-            // Adiciona a classe 'active' APENAS no link que tem o href igual ao ID desta seção
-            let targetLink = document.querySelector('.nav-list a[href*=' + id + ']');
-            if (targetLink) {
-                targetLink.classList.add('active');
+            if (currentLink) {
+                currentLink.classList.add('active');
             }
         }
     });
-
-
-};
+});
