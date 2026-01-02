@@ -1502,15 +1502,15 @@
         align-items: center;
     }
 
-    .colunab .social_links_footer {
+    .social_links_footer {
         display: flex;
         gap: 20px;
     }
 
-    .colunab .social_links_footer a {
+    .footer .social_links_footer a {
         display: inline-block;
         text-decoration: none;
-        color: #547e9f;
+        color: #ffffff;
         font-size: 1.8rem;
         transition: 0.5s ease-in-out;
     }
@@ -1534,7 +1534,7 @@
     }
 
     .colunab .social_links_footer .twitter:hover {
-        color: #ffffff;
+        color: #031aeb;
         opacity: 0.8;
     }
 
