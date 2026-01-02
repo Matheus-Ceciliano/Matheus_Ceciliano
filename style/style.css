@@ -2069,19 +2069,23 @@
             justify-content: center;
             margin-bottom: 20px;
         }
-    }
 
-    @media (max-width: 480px) {
-        .footer h2 {
-            font-size: 26px;
+        .social-links-footer a {
+            display: inline-block;
+            text-decoration: none;
         }
 
-        .footer p {
-            font-size: 16px;
-        }
+        @media (max-width: 480px) {
+            .footer h2 {
+                font-size: 26px;
+            }
 
-        .footer .contact {
-            width: 80%;
-            justify-content: center;
+            .footer p {
+                font-size: 16px;
+            }
+
+            .footer .contact {
+                width: 80%;
+                justify-content: center;
+            }
         }
-    }
