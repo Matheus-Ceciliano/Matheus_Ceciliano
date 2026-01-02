@@ -1501,7 +1501,7 @@
         align-items: center;
     }
 
-    .social-links-footer {
+    .wrapper.social-links-footer {
         display: flex !important;
         gap: 20px !important;
         justify-content: center;
@@ -1514,7 +1514,7 @@
     }
 
     /* Remove o sublinhado azul padrão e define a cor branca */
-    .colunab .social-links-footer a {
+    .wrapper .social-links-footer a {
         text-decoration: none !important;
         color: #ffffff !important;
         font-size: 1.6rem !important;
