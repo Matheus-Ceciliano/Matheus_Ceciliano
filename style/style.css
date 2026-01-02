@@ -1071,9 +1071,88 @@
         border: solid 1px rgb(49, 120, 198);
     }
 
+    /*footer*/
+    .footer {
 
+        background-color: #141414;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .footer h2 {
+        margin-top: 70px;
+        background: linear-gradient(90deg,
+                #238497,
+                #4ca1b2e0,
+                #7bdbee,
+                #80ccdb,
+                #8de0f5,
+                #aee7f5);
 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        /* garante compatibilidade */
+        background-clip: text;
+        color: transparent;
+        font-size: 52px;
+
+    }
+
+    .footer p {
+        margin-top: 50px;
+        font-size: 21px;
+        color: rgba(255, 255, 255, 0.66);
+        text-align: center;
+
+        margin: 0 auto;
+    }
+
+    .footer span {
+        display: inline-block;
+        text-align: center;
+        margin-top: 8px;
+        font-weight: 500;
+
+        background: linear-gradient(90deg,
+                #d1d1d1,
+                #c8c8c8,
+                #d0d0d0,
+                #e2e2e2,
+                #f2f2f2,
+                #ffffff);
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .footer .contact {
+        background: rgba(7, 100, 64, 0.2);
+
+        color: #ffffff;
+        padding: 14px 36px;
+        border-radius: 50px;
+
+        font-weight: 600;
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #547792;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+        box-shadow: 0 10px 30px rgba(35, 132, 151, 0.35);
+    }
+
+    .footer .contact:hover {
+        background: #4c6c85;
+        ;
+    }
 
     @media (min-width: 1650px) {
         .main h1 {
