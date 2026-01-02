@@ -1495,56 +1495,52 @@
         padding-bottom: 60px;
     }
 
-    .colunab {
+    colunab {
+        flex: 1;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
     }
 
-    .wrapper.social-links-footer {
-        display: flex !important;
-        gap: 20px !important;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        position: relative !important;
-        /* Muda de absolute para relative para fluir no layout */
-        right: auto !important;
+    .social-links-footer {
+        display: flex;
+        gap: 20px;
     }
 
-    /* Remove o sublinhado azul padrão e define a cor branca */
-    .wrapper .social-links-footer a {
-        text-decoration: none !important;
-        color: #ffffff !important;
-        font-size: 1.6rem !important;
-        /* Aumentei um pouco para facilitar o clique no mobile */
+    .social-links-footer a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 24px;
+        /* Tamanho dos ícones Remix Icon */
+        transition: all 0.3s ease;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: 0.3s ease-in-out;
     }
 
-    /* Mantém os efeitos de hover que você já tinha */
+    /* Efeitos de Hover */
     .social-links-footer a:hover {
         transform: translateY(-5px);
     }
 
     .social-links-footer a.instagram:hover {
-        color: #d62976 !important;
+        color: #d62976;
     }
 
     .social-links-footer a.github:hover {
-        color: #ffffff !important;
+        color: #4FD1C5;
     }
 
+    /* Usando o ciano do seu site */
     .social-links-footer a.linkedin:hover {
-        color: #0077b5 !important;
+        color: #0077b5;
     }
 
     .social-links-footer a.twitter:hover {
-        color: #0016df !important;
+        color: #ffffff;
+        opacity: 0.8;
     }
+
 
 
 
