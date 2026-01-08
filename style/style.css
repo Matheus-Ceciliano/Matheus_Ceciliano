@@ -632,6 +632,7 @@
 
 
 
+
     }
 
     .projects {
@@ -724,7 +725,7 @@
     .card .button {
         position: absolute;
         top: 45%;
-        left: 63%;
+        left: 69%;
         transform: translate(-40%, -70%);
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 50%;
@@ -1661,7 +1662,7 @@
     }
 
     /*Responsividade Mobile */
-    @media (max-width: 1024px) {
+    @media (max-width: 1254px) {
         .social-links {
             display: none;
         }
@@ -1732,11 +1733,11 @@
 
         .titulo {
             position: static;
-            /* Volta ao fluxo normal para obedecer o space-between */
+
             left: auto;
-            /* Anula o left: 120px do desktop */
+
             transform: none;
-            /* Remove deslocamentos extras se houver */
+
             margin: 0;
         }
 
@@ -1806,27 +1807,42 @@
             margin: 30px 0 50px;
         }
 
+        .main {
+            padding-left: 90px;
+        }
+
+        .main h1 {
+            font-size: 45px;
+
+        }
+
+        .main h4 {
+            font-size: 18px;
+
+        }
+
 
     }
 
 
-    @media (max-width: 850px) {
+    @media (max-width: 1126px) {
         /*Main */
 
         .main {
-            padding-top: 50px;
+            padding-top: 20px;
             justify-content: space-around;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             padding-left: 0;
+            flex-direction: column;
 
         }
 
         .main h4 {
 
             text-align: center;
-            font-size: 19px;
+            font-size: 25px;
             margin-bottom: 8px;
             display: flex;
             align-items: center;
@@ -1834,8 +1850,13 @@
             margin-top: 7%;
         }
 
+        .main p {
+            font-size: 24px;
+        }
+
         .main h1 {
-            font-size: 38px;
+            font-size: 50px;
+            margin-bottom: 0;
 
         }
 
@@ -1843,6 +1864,16 @@
 
         .main .call-to-action {
             padding-bottom: 15%;
+        }
+
+        .download-button {
+            width: 100%;
+            max-width: 170px;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            /* Centraliza horizontalmente e adiciona 10px de margem inferior */
+            display: flex;
+            /* Garante que o margin auto funcione */
         }
 
         /*FIm Main*/
@@ -1924,20 +1955,23 @@
 
         }
 
-        .shortly-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-
-        }
-
-        .shortly-container .shortly {
-            width: 85%;
-            text-align: center;
-            margin: 0 auto;
-        }
+        .card .img {}
     }
+
+    .shortly-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .shortly-container .shortly {
+        width: 85%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
 
 
     @media (max-width: 480px) {
