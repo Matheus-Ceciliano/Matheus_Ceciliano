@@ -1852,7 +1852,7 @@
         }
 
         .main p {
-            font-size: 24px;
+            font-size: 20px;
         }
 
         .main h1 {
@@ -1956,7 +1956,7 @@
 
         }
 
-        .card .img {}
+
     }
 
     .shortly-container {
@@ -1979,6 +1979,10 @@
         .tecnologias h2 {
             font-size: 26px;
             margin: 20px 0 40px;
+        }
+
+        .texto-inicial h1 {
+            font-size: 30px;
         }
     }
 
